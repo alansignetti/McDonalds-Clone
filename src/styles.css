@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+.home{
+
+  width: 50%;
+  margin: auto;
+  margin-top: 10%;
+}
+.home h1{
+  text-align: center;
+}
