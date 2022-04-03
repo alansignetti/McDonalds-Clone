@@ -24,7 +24,6 @@ firefox 95
 firefox 94
 firefox 91
 firefox 78
-ie 11
 ios_saf 15.2-15.3
 ios_saf 15.0-15.1
 ios_saf 14.5-14.8
@@ -41,5 +40,4 @@ safari 14.1
 safari 13.1
 samsung 16.0
 samsung 15.0
-not ios_saf 15.2-15.3
-not safari 15.2-15.3
+

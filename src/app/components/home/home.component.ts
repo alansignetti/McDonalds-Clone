@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     this._apiService.getHamburguesas().subscribe(res =>{
       // this.nombre = res.nombre;
       this.listaHamburguesas = res;
-      console.log(this.listaHamburguesas);
+      // console.log(this.listaHamburguesas);
     })
   }
 }

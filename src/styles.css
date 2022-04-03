@@ -1,11 +1,71 @@
 
+/* estilos para que siempre simule ser un celular */
+.mobile{
+  width: 330px;
+
+}
+.caja{
+  margin: 0px auto;
+  margin-top: 5%;
+  height: 100%;
+  /* padding-top: 50px; */
+}
+.header{
+  width: 100%;
+  background-color: #fff;
+  /* background-color: aqua; */
+  margin: 0;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+#logo{
+  width: 50px;
+  margin: 0px auto;
+  margin-top: 10px;
+  /* z-index: 999; */
+}
+
 
 .home{
 
   width: 50%;
   margin: auto;
-  margin-top: 10%;
 }
 .home h1{
   text-align: center;
 }
+
+/* si el dispositivo es mas ancho, aumenta el width */
+@media (min-width: 350px) {
+.mobile{
+  width: 350px;
+}
+
+@media (min-width: 370px) {
+  .mobile{
+    width: 370px;
+  }
+}
+
+@media (min-width: 400px) {
+  .mobile{
+    width: 400px;
+  }
+}
+
+/* @media (min-width: 450px) {
+  .mobile{
+    width: 450px;
+  }
+}
+
+@media (min-width: 500px) {
+  .mobile{
+    width: 500px;
+  }
+} */
+}
+
+
