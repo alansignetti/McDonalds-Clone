@@ -4,15 +4,15 @@
 <div class="home">
   <h3>Lista de API</h3>
 
-  <ul  class="list-group">
+  <!-- div para que no se vea mal mientras carga la api -->
+  <!-- <div *ngIf="!listaHamburguesas" class="loading">
+
+  </div> -->
+
+  <ul *ngIf="listaHamburguesas" class="list-group">
     <li *ngFor="let h of listaHamburguesas" class="list-group-item">{{h.nombre}}</li>
     <li *ngFor="let h of listaHamburguesas" class="list-group-item">{{h.nombre}}</li>
 
   </ul>
 
-  <!-- <ul  >
-    <li *ngFor="let h of listaHamburguesas">{{h.nombre}}</li>
-    <li *ngFor="let h of listaHamburguesas">{{h.nombre}}</li>
-    <li *ngFor="let h of listaHamburguesas">{{h.nombre}}</li>
-  </ul> -->
 </div>
