@@ -110,65 +110,54 @@
   text-align: center;
 }
 
+
+/* esto viene de bootstrap */
+.margin-bottom {
+  margin-bottom: 3rem;
+}
+
 /* si el dispositivo es mas ancho, aumenta el width */
-@media (max-width: 330px) {
+/* @media (max-width: 360px) {
+
+
+} */
+ @media (max-width: 500px) {
+
+.margin-bottom {
+  margin-bottom: 0rem;
+}
+
 .mobile{
-  width: 330px;}
-  .footer-mas a{
-    margin-left: 7px;
+  width: 100%;
+
+}
+ }
+
+ @media (min-width: 360px) {
+
+  .opcion{
+    margin-left: 20px;
+  }
+
+}
+
+@media (min-width: 400px) {
+
+  .opcion{
+    margin-left: 25px;
+  }
+
+}
+
+@media (min-width: 410px) {
+
+  .mobile{
+    width: 340px;
+
   }
   .opcion{
     margin-left: 15px;
   }
 
-  #logo-mas{
-    margin-right:10px;
-  }
 }
-
-
-@media (max-width: 370px) {
-  .mobile{
-    width: 370px;
-  }
-  .opcion{
-    margin-left: 15px;
-  }
-  #logo-mis-cupones{
-    margin-left:15px;
-  }
-  #logo-mas{
-    margin-right:10px;
-  }
-}
-
-@media (max-width: 400px) {
-  .mobile{
-    width: 400px;
-  }
-  .opcion{
-    margin-left: 20px;
-  }
-}
-
- @media (max-width: 450px) {
-  .mobile{
-    width: 450px;
-  }
-  .opcion{
-    margin-left: 20px;
-  }
-}
-
-@media (max-width: 500px) {
-  .mobile{
-    width: 500px;
-  }
-
-  .opciones-footer{
-    width: 100%;
-  }
-}
-
-
 
