@@ -10,6 +10,7 @@ import { Observable, throwError } from 'rxjs';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/logo/logo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LogoComponent } from './components/logo/logo.component';
     HomeComponent,
     NavbarComponent,
     HeaderComponent,
-    LogoComponent
+    LogoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
