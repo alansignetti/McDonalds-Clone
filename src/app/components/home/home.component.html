@@ -2,17 +2,24 @@
 
 
 <div class="home">
-  <h3>Lista de API</h3>
+  <h3>McCombos</h3>
 
-  <!-- div para que no se vea mal mientras carga la api -->
-  <!-- <div *ngIf="!listaHamburguesas" class="loading">
+  <div class="loading" *ngIf="!listaHamburguesas.length" >
+    <img id="loading" src="assets/img/loading.gif" alt="loading">
+  </div>
 
-  </div> -->
 
-  <ul *ngIf="listaHamburguesas" class="list-group">
-    <li *ngFor="let h of listaHamburguesas" class="list-group-item">{{h.nombre}}</li>
-    <li *ngFor="let h of listaHamburguesas" class="list-group-item">{{h.nombre}}</li>
+  <div ngClass="combos" *ngFor="let h of listaHamburguesas">
 
-  </ul>
+    <div ngClass="mc-combo">
+      <p ngClass="mc-combo-nombre">{{h.nombre}}</p>
+      <img src="assets/img/{{h.imagen}}.png" alt={{h.imagen}}>
+      <p ngClass="mc-combo-precio">$ {{h.precio}}</p>
+    </div>
+  </div>
+
+
+
+
 
 </div>

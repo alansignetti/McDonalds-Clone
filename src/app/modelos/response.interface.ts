@@ -1,5 +1,8 @@
 export interface ResponseI{
-  status:string;
-  response:string;
+
+  id:string;
   nombre:string;
+  imagen:string;
+  precio:number;
+
 }

@@ -68,9 +68,16 @@
   color: #b8b8b8;
 }
 
-.opciones-footer img.disabled{
+.opciones-footer img{
   filter: invert(83%) sepia(4%) saturate(3%) hue-rotate(349deg) brightness(86%) contrast(102%);
 
+}
+.opciones-footer img:active{
+  /* transform: scale(1.2); */
+}
+
+.is-active img{
+  filter: none;
 }
 
 .footer-home{
@@ -94,24 +101,73 @@
   margin-left:8px;
 }
 
-/* .disabled{
-  filter: invert(46%) sepia(8%) saturate(10%) hue-rotate(346deg) brightness(91%) contrast(87%);
-} */
 
 .home{
 
   width: 50%;
   margin: auto;
 }
-.home h1{
+.home h3{
   text-align: center;
 }
+
+
+
+.combos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mc-combo{
+  text-align: center;
+    font-size: 18px;
+    width: 100%;
+    font-weight: 400;
+    color: #292929;
+    word-spacing: 1px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.mc-combo img{
+  width: 100px;
+  margin: 0 auto;
+}
+
+
+.mc-combo p{
+  text-align: center;
+  font-size: 15px;
+}
+
+#loading{
+  display: flex;
+  /* margin: 0 auto; */
+  /* margin-right: 30px; */
+  margin-top: 100px;
+  width: 150px;
+  justify-content: center;
+  align-items:center;
+}
+
+
+
+
+
+
+
+
 
 
 /* esto viene de bootstrap */
 .margin-bottom {
   margin-bottom: 3rem;
 }
+.shadow-lista {
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+}
+/* esto viene de bootstrap */
 
 /* si el dispositivo es mas ancho, aumenta el width */
 
@@ -125,6 +181,11 @@
   width: 100%;
 
 }
+.loading{
+  height: 100vh;
+  background-color: #fff;
+
+}
 
 .content{
   height: 100%;
@@ -135,6 +196,16 @@ html{
 body{
   height: 100%;
 }
+.home{
+    margin-bottom: 15px;
+    /* height: 100%; */
+}
+
+.shadow-lista {
+  box-shadow: none;
+  /* box-shadow: 1  0rem 0rem #000; */
+}
+
 }
 
  @media (min-width: 360px) {
@@ -186,6 +257,7 @@ body{
 
 
 
+
 /* coming soon */
 
 @keyframes sway {
@@ -219,7 +291,7 @@ body{
   height: 100px;
   border-radius: 50%;
   display: block;
-  background-color: #2187C7;
+  background-color: #DA291C;
   margin: 0 auto;
   position: relative;
   color: #fff;
@@ -239,7 +311,7 @@ body{
 .object-rope {
   height: 100%;
   width: 5px;
-  background-color: #2187C7;
+  background-color: #DA291C;
   content: "";
   display: block;
   margin-left: 50%;
