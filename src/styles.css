@@ -291,7 +291,8 @@ body{
   height: 100px;
   border-radius: 50%;
   display: block;
-  background-color: #DA291C;
+  /* background-color: #DA291C; */
+   background-color: #FFC72C;
   margin: 0 auto;
   position: relative;
   color: #fff;
