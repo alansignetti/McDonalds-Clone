@@ -7,7 +7,7 @@
 .caja{
   margin: 0px auto;
   margin-top: 5%;
-  height: 100%;
+  /* height: 100%;  falla en mobile */
   /* padding-top: 50px; */
 }
 .header{
@@ -71,9 +71,6 @@
 .opciones-footer img{
   filter: invert(83%) sepia(4%) saturate(3%) hue-rotate(349deg) brightness(86%) contrast(102%);
 
-}
-.opciones-footer img:active{
-  /* transform: scale(1.2); */
 }
 
 .is-active img{
@@ -169,7 +166,7 @@
 }
 /* esto viene de bootstrap */
 
-/* si el dispositivo es mas ancho, aumenta el width */
+/* dispositivo mobile max 500px*/
 
  @media (max-width: 500px) {
 
@@ -181,6 +178,7 @@
   width: 100%;
 
 }
+
 .loading{
   height: 100vh;
   background-color: #fff;
@@ -224,8 +222,12 @@ body{
 
 }
 
-@media (min-width: 410px) {
+/* vista pc */
+@media (min-width: 440px) {
 
+  .caja{
+    height: 100%;
+  }
   .mobile{
     width: 340px;
     /* height: 500px; */
