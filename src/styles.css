@@ -186,7 +186,8 @@
 }
 
 .content{
-  height: 100%;
+  /* height: 100%; */
+  height: 100vh;
 }
 html{
   height:  100%;
