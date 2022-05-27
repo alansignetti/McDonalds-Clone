@@ -1,13 +1,177 @@
-<div class="object">
+<!-- <div class="object">
   <div class="object-rope"></div>
   <div class="object-shape">
     Coming <span class="soon">Soon</span>
   </div>
+</div> -->
+
+<!-- CARGAR LA PAGINA DE FORMA DINAMICA -->
+<!--ng-container ngFor="let o of listOfertas">
+  <divngIf="o.seccion == 1" class="oferta">
+    <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+        alt="{{o?.id}}"></a>
+  </div>
+</ng-container>
+Crisds — hoy a las 22:33
+<div class="seccion seccion-1">
+<h3>Participá de un exclusivo Meet & Greet 🎵😎📣</h3>
+<div class="lista-ofertas"> //Aca seria el display flex
+<ng-container *ngFor="let o of listOfertas">
+  <div *ngIf="o.seccion == 1" class="oferta">
+    <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+        alt="{{o?.id}}"></a>
+  </div>
+</ng-container>
 </div>
+</div-->
 
-<div class="content">
 
-<h2 class="message">Estamos Trabajando!</h2>
 
+<div class="content pedidos-container">
+
+  <div class="promocion">
+    <h2 class="titulo"> Promociones </h2>
+
+    <section class="flex-container">
+
+      <div class="box">
+
+        <ng-container *ngFor="let o of listaHamburguesas">
+          <div class="hamburguesa">
+            <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.imagen}}.png" alt="{{o?.id}}"
+                width="100px"></a>
+            <h6 class="encabezado">{{o.nombre}}</h6>
+            <p class="precio">${{o.precio}}</p>
+          </div>
+
+        </ng-container>
+
+
+
+        <!--
+        <div class="hamburguesa">
+          <a routerLink="/pedidos/detalle/1"><img src="assets/img/40-Grand-Tasty-Turbo-Bacon.png" alt="40 Grand Tasty Turbo Bacon" width="100px"></a>
+          <h6 class="encabezado">40% Grand Tasty Turbo Bacon Doble con papas</h6>
+          <p class="precio">$730</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/MOP-PEDI-Y-RETIRA-2x1-Papas-Tasty.png" alt="Cuarto de Libra Grande Con queso"
+            width="100px">
+          <h6 class="encabezado">2X1 Papas Tasty Bacon </h6>
+          <p class="precio">$390</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/2-MCCombos-Medianos-Cuarto-de-Libra-con-queso.png" alt="Cuarto de Libra Grande Con queso"
+            width="100px">
+          <h6 class="encabezado">2 MCCombos Medianos Cuarto de Libra con queso</h6>
+          <p class="precio">$1.590</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/Sundae-Gratis-con-un-McCombo-Big-Mac.png" alt="Sundae Gratis con un McCombo Big Mac"
+            width="100px">
+          <h6 class="encabezado">Sundae Gratis con un McCombo Big Mac</h6>
+          <p class="precio">$850</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/2-Haamburguesas-con-Queso.png" alt="2 Haamburguesas con Queso" width="100px">
+          <h6 class="encabezado">Sundae Gratis con un McCombo Big Mac</h6>
+          <p class="precio">$700</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/2-McFlurry-Oreo.png" alt="2 McFlurry Oreo" width="100px">
+          <h6 class="encabezado">Sundae Gratis con un McCombo Big Mac</h6>
+          <p class="precio">$600</p>
+        </div>
+      -->
+
+
+
+      </div>
+    </section>
+  </div>
+
+  <div class="MCCombos">
+    <h2 class="titulo"> McCombos </h2>
+
+    <section class="flex-container">
+      <div class="box">
+
+        <div class="hamburguesa">
+          <img src="assets/img/McCombo-Mediano-Grand-Tasty-Turbo-Bacon-Doble.png"
+            alt="McCombo Mediano Grand Tasty Turbo Bacon Dobleo" width="100px">
+          <h6 class="encabezado">McCombo Mediano Grand Tasty Turbo Bacon Doble</h6>
+          <p class="precio">$1.270</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/McCombo-Mediano-Grand-Tasty-Turbo-Bacon-Triple.png"
+            alt="McCombo Mediano Grand Tasty Turbo Bacon Triple" width="100px">
+          <h6 class="encabezado">McCombo Mediano Grand Tasty Turbo Bacon Triple</h6>
+          <p class="precio">$1.420</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/Combo-Cuadruple-Bacon-Grande.png" alt="McCombo Grande Cuadruple Bacon" width="100px">
+          <h6 class="encabezado">McCombo Grande Cuadruple Bacon</h6>
+          <p class="precio">$1.090</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/McCOMBO-TRIPLE-MAC-Grande.png" alt="McCombo Grande TripleMac" width="100px">
+          <h6 class="encabezado">McCombo Grande TripleMac</h6>
+          <p class="precio">$1.090</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/McCOMBO-BIG-MAC-Grande.png" alt="McCOMBO BIG MAC Grande" width="100px">
+          <h6 class="encabezado">McCombo Grande Big Mac</h6>
+          <p class="precio">$990</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/McCOMBO-McNIFICA-Mediano.png" alt="McCombo Mediano McNifica" width="100px">
+          <h6 class="encabezado">McCombo Mediano McNifica</h6>
+          <p class="precio">$880</p>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <div class="McOfertas">
+    <h2 class="titulo"> McOfertas </h2>
+
+    <section class="flex-container">
+      <div class="box">
+
+        <div class="hamburguesa">
+          <img src="assets/img/McCombo-Grande-Doble-BBQ.png" alt="McCombo Grande Doble BBQ con queso" width="100px">
+          <h6 class="encabezado">McCombo Grande Doble BBQ con queso</h6>
+          <p class="precio">$790</p>
+        </div>
+
+        <div class="hamburguesa">
+          <img src="assets/img/McCombo-Grande-Doble-Mayo.png" alt="McCombo Grande Doble Mayo con queso" width="100px">
+          <h6 class="encabezado">McCombo Grande Doble Mayo con queso</h6>
+          <p class="precio">$790</p>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <div class="boton-mis-pedidos">
+    <img src="assets/img/bolsa-pedido.svg" alt="pedidos" width="15%">
+    <!--img src="assets/img/mis-Pedidos-Boton.png" alt="pedidos" width="15%"-->
+    <h4 class="titulo" class="btnPedidos">Mis Pedidos</h4>
+    <span class="flecha derecha"></span>
+  </div>
 
 </div>

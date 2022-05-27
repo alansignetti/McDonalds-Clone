@@ -1,0 +1,18 @@
+
+<div class="content">
+
+  <!--div class="loading" *ngIf="!detalleHamburguesa.length" ></div>
+    <p>{{detalleHamburguesa.nombre}}</p>
+  </div-->
+
+  <div ngClass="combos" *ngFor="let h of detalleHamburguesa">
+
+    <div ngClass="mc-combo">
+      <p ngClass="mc-combo-nombre">{{h.nombre}}</p>
+      <img src="assets/img/{{h.imagen}}.png" alt={{h.imagen}}>
+      <p ngClass="mc-combo-precio">$ {{h.precio}}</p>
+    </div>
+  </div>
+  
+
+</div>

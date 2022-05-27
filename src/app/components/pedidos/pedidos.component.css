@@ -1,0 +1,25 @@
+.content{
+    padding-top: 1rem;
+}
+
+/* Distintas flechas */
+.flecha	{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	/*margin: 30px;*/
+	border-top: solid 3px;
+	border-right: solid 3px;
+}
+.flecha.derecha {
+	transform: rotate(45deg);
+}
+.flecha.abajo {
+	transform: rotate(135deg);
+}
+.flecha.izquierda {
+	transform: rotate(225deg);
+}
+.flecha.arriba {
+	transform: rotate(315deg);
+}

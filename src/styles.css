@@ -199,6 +199,10 @@ body{
     margin-bottom: 15px;
     /* height: 100%; */
 }
+.pedidos-container{
+  margin-bottom: 15px;
+  /* height: 100%; */
+}
 
 .shadow-lista {
   box-shadow: none;
@@ -248,6 +252,11 @@ body{
     overflow:hidden;
     overflow-y:scroll;
   }
+  .pedidos-container{
+    height: 400px;
+    overflow:hidden;
+    overflow-y:scroll;
+  }
   ::-webkit-scrollbar {
     display: none;
   }
@@ -256,9 +265,6 @@ body{
     height: 400px;
   }
 }
-
-
-
 
 
 /* coming soon */
@@ -337,4 +343,71 @@ body{
 
 .message {
   margin-top: 40px;
+}
+
+
+/* Fer */
+.hamburguesa {
+  /*background-color: rgb(199, 19, 19);*/
+  /*font-family: 'Courier New', Courier, monospace;*/
+  /*font-weight: bold;*/
+  width: 100%;
+  margin: 5px;
+  text-align:center;
+  /*text-align:unset;*/
+  /*line-height: 80px;*/
+}
+
+.titulo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.encabezado{
+  margin-top: 2px;
+  font-size: smaller;
+  width: 150px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.precio{
+  font-size: smaller;
+}
+
+.flex-container{
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  /*
+  display: flex;
+  flex:1;
+  /*background: #ccc;
+  border:1px solid black;*/
+  /*justify-content:space-between;
+  flex-wrap:nowrap;
+  overflow:auto;*/
+}
+
+.box {
+    display: flex;
+    gap: 1rem;
+    max-width: 20rem;
+    overflow-x: scroll;
+}
+
+/*Saca la barra de scroll*/
+::-webkit-scrollbar { 
+  display: none;
+}
+
+.boton-mis-pedidos{
+  display: flex;
+  /*background: white;
+  border:1px solid black;*/
+  width: fit-content;
+  align-items: center;
+  justify-content:space-around;
+  flex-wrap:nowrap;
 }

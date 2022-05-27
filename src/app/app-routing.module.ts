@@ -5,6 +5,7 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { OfertasComponent } from './components/ofertas/ofertas.component';
 import { MasComponent } from './components/mas/mas.component';
 import { MisCuponesComponent } from './components/mis-cupones/mis-cupones.component';
+import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-detalle.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'pedidos', component: PedidosComponent},
   {path: 'ofertas', component: OfertasComponent},
   {path: 'mis-cupones', component: MisCuponesComponent},
-  {path: 'mas', component: MasComponent}
+  {path: 'mas', component: MasComponent},
+  {path: 'pedidos/detalle/:variable', component:PedidosDetalleComponent}
 
 
   // {path: '**', component: ErrorComponent}

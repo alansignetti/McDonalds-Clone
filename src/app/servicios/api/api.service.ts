@@ -17,5 +17,14 @@ export class ApiService {
     return this.http.get<ResponseI[]>(url);
   }
 
+  getDataHamburguesa(id:any):Observable<ResponseI>{
+    let url = this._url +'hamburguesa/'+id;
+    return this.http.get<ResponseI>(url);
+  }
+
+  getDataPromociones(tipo:any):Observable<ResponseI>{
+    let url = this._url +'hamburguesa?tipo='+tipo;
+    return this.http.get<ResponseI>(url);
+  }
 
 }
