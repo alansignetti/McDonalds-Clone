@@ -4,4 +4,7 @@ export interface ResponseI {
   imagen: string;
   precio: number;
   tipo: string;
+  descripcion:string;
+  ingredientes:string[];
+  seccion:string;
 }

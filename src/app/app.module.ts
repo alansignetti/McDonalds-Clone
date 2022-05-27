@@ -15,6 +15,8 @@ import { OfertasComponent } from './components/ofertas/ofertas.component';
 import { MisCuponesComponent } from './components/mis-cupones/mis-cupones.component';
 import { MasComponent } from './components/mas/mas.component';
 import { DetalleOfertasComponent } from './detalle-ofertas/detalle-ofertas.component';
+import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-detalle.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { DetalleOfertasComponent } from './detalle-ofertas/detalle-ofertas.compo
     OfertasComponent,
     MisCuponesComponent,
     MasComponent,
-    DetalleOfertasComponent
+    DetalleOfertasComponent,
+    PedidosDetalleComponent
   ],
   imports: [
     BrowserModule,
