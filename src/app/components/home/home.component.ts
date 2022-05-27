@@ -19,10 +19,6 @@ export class HomeComponent implements OnInit {
 
   getHamburguesas() {
     this._apiService.getHamburguesas().subscribe((res) => {
-      // this.nombre = res.nombre;
-      // this.listaHamburguesas = res;
-      // console.log(this.listaHamburguesas);
-
       for (let i of res) {
         if (i.seccion == 'home') {
           this.listaHamburguesas.push(i);
