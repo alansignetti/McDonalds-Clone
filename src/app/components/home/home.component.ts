@@ -5,24 +5,29 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
   // public nombre: string = "";
   // public listaHamburguesas=;
   listaHamburguesas: ResponseI[] = [];
-  constructor(private _apiService:ApiService) { }
+  constructor(private _apiService: ApiService) {}
 
   ngOnInit(): void {
     this.getHamburguesas();
   }
 
-  getHamburguesas(){
-    this._apiService.getHamburguesas().subscribe(res =>{
+  getHamburguesas() {
+    this._apiService.getHamburguesas().subscribe((res) => {
       // this.nombre = res.nombre;
-      this.listaHamburguesas = res;
-      console.log(this.listaHamburguesas);
-    })
+      // this.listaHamburguesas = res;
+      // console.log(this.listaHamburguesas);
+
+      for (let i of res) {
+        if (i.seccion == 'home') {
+          this.listaHamburguesas.push(i);
+        }
+      }
+    });
   }
 }
