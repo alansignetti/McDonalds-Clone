@@ -1,13 +1,68 @@
-<div class="object">
-  <div class="object-rope"></div>
-  <div class="object-shape">
-    Coming <span class="soon">Soon</span>
+<div class="content padding-top">
+  <div class="seccion seccion-1">
+    <h3>Participá de un exclusivo Meet & Greet 🎵😎📣</h3>
+    <div class="lista-ofertas">
+      <ng-container *ngFor="let o of listOfertasSeccion1">
+        <div *ngIf="o.seccion == 1" class="oferta">
+          <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+              alt="{{o?.id}}"></a>
+        </div>
+      </ng-container>
+    </div>
   </div>
-</div>
-
-<div class="content">
-
-<h2 class="message">Estamos Trabajando!</h2>
-
-
+  <div class="seccion seccion-2">
+    <h3>Para compartir con Amigos o en Familia ✌</h3>
+    <div class="lista-ofertas">
+      <ng-container *ngFor="let o of listOfertasSeccion2">
+        <div *ngIf="o.seccion == 2" class="oferta">
+          <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+              alt="{{o?.id}}"></a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="seccion seccion-3">
+    <h3>Postres a Toda Hora Papaa!!</h3>
+    <div class="lista-ofertas">
+      <ng-container *ngFor="let o of listOfertasSeccion3">
+        <div *ngIf="o.seccion == 3" class="oferta">
+          <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+              alt="{{o?.id}}"></a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="seccion seccion-4">
+    <h3>Open 24 🌖 (Mas vale que vengas gil)</h3>
+    <div class="lista-ofertas">
+      <ng-container *ngFor="let o of listOfertasSeccion4">
+        <div *ngIf="o.seccion == 4" class="oferta">
+          <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+              alt="{{o?.id}}"></a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="seccion seccion-5">
+    <h3>Para desayunar 🥐☕</h3>
+    <div class="lista-ofertas">
+      <ng-container *ngFor="let o of listOfertasSeccion5">
+        <div *ngIf="o.seccion == 5" class="oferta">
+          <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+              alt="{{o?.id}}"></a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="seccion seccion-6">
+    <h3>Momentos ☕</h3>
+    <div class="lista-ofertas">
+      <ng-container *ngFor="let o of listOfertasSeccion6">
+        <div *ngIf="o.seccion == 6" class="oferta">
+          <a [routerLink]="['/', 'detalle-oferta', o?.id]"><img src="assets/img/{{o.urlImagen}}.png"
+              alt="{{o?.id}}"></a>
+        </div>
+      </ng-container>
+    </div>
+  </div>
 </div>

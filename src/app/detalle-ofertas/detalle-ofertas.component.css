@@ -1,0 +1,32 @@
+.padding-top{
+    padding-top: 1.5rem;
+    overflow-y: auto;
+}
+
+.padding-top img{
+    object-fit: contain;
+    max-width: 100%;
+    width: 100%;
+}
+
+.carga-ofertas {
+    width: 50%;
+    margin: auto;
+}
+
+.content-detalle{
+    padding: 0;
+    padding-top: 24px;
+}
+
+.pais-valido{
+    display: flex;
+    margin-top: 1.5rem;
+    font-size: 13px;
+    color: rgb(194, 194, 194);
+}
+
+.pais-valido img{
+    height: 50px;
+    width: 50px;
+}

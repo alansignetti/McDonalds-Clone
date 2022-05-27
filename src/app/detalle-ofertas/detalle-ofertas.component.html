@@ -1,0 +1,22 @@
+<!-- <div>
+    <img src="assets/img/oferta-amigos-1.png" alt="">
+</div> -->
+
+
+<div class="content content-detalle padding-top">
+
+    <div class="loading carga-ofertas" *ngIf="respuesta == null" >
+        <img id="loading" src="assets/img/loading.gif" alt="loading">
+    </div>
+    <!-- <img src="assets/img/{{respuesta.urlImagen}}.png" alt=""> -->
+    <div *ngIf="respuesta != null">
+        <!-- <p>{{respuesta?.seccion | json}}</p> -->
+        <img src="assets/img/{{respuesta?.urlImagen}}.png" alt="">
+        <div class="pais-valido">
+            <img src="assets/img/argentina.png" alt="">
+            <p>Este cupón es valido solamente en los restaurantes de argentina</p>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,81 @@
+.padding-top{
+    padding-top: 1.5rem;
+    overflow-y: auto;
+    align-items: flex-start;
+}
+
+.content h3{
+    font-size: small;
+}
+
+.lista-ofertas{
+    display: flex;
+    gap: 1rem;
+    max-width: 300px;
+    height: 200px;
+    width: 100%;
+    
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: start;
+}
+
+.seccion img{
+    width: 300px;
+    height: 130px;
+    max-width: 140px;
+    object-fit: unset;
+}
+
+.seccion{
+    position: relative;
+    animation-name: animation;
+    animation-duration: 1s; /*La onda seria que la animacion sea una por una cuando va pasando por la pantalla*/
+}
+
+.lista-ofertas-final{
+    display: flex;
+  background: #ccc;
+  border:1px solid black;
+  justify-content:space-between;
+  flex-wrap:nowrap;
+  overflow:auto;
+}
+
+::-webkit-scrollbar { /*Saca la barra de scroll*/
+    display: none;
+}
+
+.seccion-final{
+    position: relative;
+    animation-name: animation;
+    animation-duration: 1s; /*La onda seria que la animacion sea una por una cuando va pasando por la pantalla*/
+}
+
+.seccion-final img{
+    width: 50%;
+    
+}
+
+.flex-input{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    border: 1px solid rgba(202, 202, 199, 0.795);
+    border-width: 1px 0;
+    
+}
+.flex-input input{
+    border: none;
+}
+
+.lista-ofertas a{
+    height: fit-content;
+}
+
+
+
+@keyframes animation {
+    0%   {left:400px; top:0px;}
+    100% {left:0px; top:0px;}
+}
