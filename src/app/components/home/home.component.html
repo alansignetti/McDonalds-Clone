@@ -13,7 +13,7 @@
 
     <div ngClass="mc-combo">
       <p ngClass="mc-combo-nombre">{{h.nombre}}</p>
-      <img src="assets/img/{{h.imagen}}.png" alt={{h.imagen}}>
+      <img src="assets/img/{{h.imagen}}.png" alt={{h.imagen}} [routerLink]="['/detalle-home', h.id]">
       <p ngClass="mc-combo-precio">$ {{h.precio}}</p>
     </div>
   </div>

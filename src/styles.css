@@ -152,6 +152,10 @@
   width: 100px;
   margin: 0 auto;
 }
+.mc-combo img:hover{
+  cursor: pointer;
+}
+
 
 
 .mc-combo p{

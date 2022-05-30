@@ -1,0 +1,20 @@
+
+  
+  <div class="home loading">
+  
+    <div class="loading" *ngIf="!hamburguesa" >
+      <img id="loading" src="assets/img/loading.gif" alt="loading">
+    </div>
+  
+    <div ngClass="combos">
+
+      <div ngClass="mc-combo">
+        <p ngClass="mc-combo-nombre">{{hamburguesa?.nombre}}</p>
+        <img src="assets/img/{{hamburguesa?.imagen}}.png" alt={{hamburguesa?.imagen}} [routerLink]="['/detalle-home', hamburguesa?.id]">
+        <p ngClass="mc-combo-precio">$ {{hamburguesa?.precio}}</p>
+      </div>
+    </div>
+  
+
+  </div>
+  

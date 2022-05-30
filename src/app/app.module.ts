@@ -16,6 +16,7 @@ import { MisCuponesComponent } from './components/mis-cupones/mis-cupones.compon
 import { MasComponent } from './components/mas/mas.component';
 import { DetalleOfertasComponent } from './detalle-ofertas/detalle-ofertas.component';
 import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-detalle.component';
+import { DetalleHomeComponent } from './detalle-home/detalle-home.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-de
     MisCuponesComponent,
     MasComponent,
     DetalleOfertasComponent,
-    PedidosDetalleComponent
+    PedidosDetalleComponent,
+    DetalleHomeComponent
   ],
   imports: [
     BrowserModule,
