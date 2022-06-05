@@ -1,0 +1,45 @@
+<div class="loading" *ngIf="!detalleHamburguesa.length">
+    <img id="loading" src="assets/img/loading.gif" alt="loading">
+</div>
+
+<div class="content pedidos-container">
+
+    <h4 class="titulo" style="margin-bottom:14%;">Ingredientes</h4>
+
+    <div *ngFor="let h of detalleHamburguesa">
+        <div *ngFor="let i of h.ingredientes">
+
+            <div class="flex-ingredientes">
+
+                <div class="imagen-ingrediente">
+                    <img src="assets/img/Ingredientes/{{i.nombre}}.png" alt="{{i.nombre}}">
+                </div>
+
+                <div class="nombre-ingrediente">
+                    <div style="font-size: small;">{{i.nombre}}</div>
+                    <div style="font-size: small;">${{i.precio}}</div>
+                </div>
+
+
+                <div class="cantidad-ingrediente">
+                    <div *ngIf="i.nombre == 'Carne' || i.nombre == 'Tomate' || i.nombre == 'Bacon' || i.nombre == 'Bacon Triturado' ||
+                i.nombre == 'Queso-Cheddar'" class="flex-item">
+                        <button class="contador" (click)="decrementarIngrediente(i.nombre)">-</button>
+                        <div class="cantidad" id={{i.nombre}}>{{i.cantidad}}</div>
+                        <button class="contador" (click)="incrementarIngrediente(i.nombre)">+</button>
+                    </div>
+                    <div *ngIf="i.nombre != 'Carne' && i.nombre != 'Tomate' && i.nombre != 'Bacon' && i.nombre != 'Bacon Triturado' &&
+                i.nombre != 'Queso-Cheddar'">
+                        <input type="checkbox" id={{i.nombre}} checked>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="confirmar-pedido" (click)="guardarIngredientes()">Confirmar</button>
+            <a [routerLink]="['/','pedidos-detalle',h.id]">
+                
+            </a>
+       
+    </div>
+</div>

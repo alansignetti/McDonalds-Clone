@@ -115,6 +115,11 @@
 #logo-ofertas{
   width: 30px;
 }
+
+#logo-carrito{
+  width: 30px;
+  margin-left: 11px;
+}
 .footer-mas a {
   margin-left:8px;
 }
@@ -432,7 +437,7 @@ body{
   display: none;
 }
 
-.boton-mis-pedidos{
+.boton-seccion{
   display: flex;
   /*background: white;
   border:1px solid black;*/
@@ -440,4 +445,61 @@ body{
   align-items: center;
   justify-content:space-around;
   flex-wrap:nowrap;
+  color: black;
+}
+
+/* Estilos de la pantalla detalle pedido */
+.flex-detalle{
+  display: flex;
+  flex-direction: column;
+}
+
+.img-detalle{
+  width: 100%;
+}
+
+/*Estilos del contador de productos seccion: pedidos-detalle */
+.flex-item{
+  display: flex;
+  border-radius: 6px;
+  border:1px solid black;
+  height: fit-content;
+}
+
+#item{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.contador{
+  border-radius: 6px;
+  background: transparent;
+  border: none;
+}
+
+.contador:hover{
+  background-color: #cecccc;
+}
+/*Fin de estilos del contador */
+
+/* Distintas flechas */
+.flecha	{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	/*margin: 30px;*/
+	border-top: solid 3px;
+	border-right: solid 3px;
+}
+.flecha.derecha {
+	transform: rotate(45deg);
+}
+.flecha.abajo {
+	transform: rotate(135deg);
+}
+.flecha.izquierda {
+	transform: rotate(225deg);
+}
+.flecha.arriba {
+	transform: rotate(315deg);
 }

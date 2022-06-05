@@ -1,6 +1,7 @@
 import { ResponseI } from './../../modelos/response.interface';
 import { ApiService } from './../../servicios/api/api.service';
 import { Component, OnInit } from '@angular/core';
+import { ReadKeyExpr } from '@angular/compiler';
 
 
 @Component({
@@ -10,7 +11,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosComponent implements OnInit {
 
-  listaHamburguesas: ResponseI[] = [];
+  listaDePromociones: ResponseI[] = [];
+  listaDeMcCombos: ResponseI[] = [];
+  listaDeMcOfertas: ResponseI[] = [];
   constructor(private _apiService:ApiService) { }
 
   ngOnInit(): void {
@@ -19,9 +22,19 @@ export class PedidosComponent implements OnInit {
 
   getHamburguesas(){
     this._apiService.getHamburguesas().subscribe(res =>{
-      // this.nombre = res.nombre;
-      this.listaHamburguesas = res;
-      console.log(this.listaHamburguesas);
+      for (let i of res) {
+        switch (i.tipo){
+          case 'Promociones':
+            this.listaDePromociones.push(i);
+            break;
+          case 'McCombos':
+            this.listaDeMcCombos.push(i);
+            break;
+          case 'McOfertas':
+            this.listaDeMcOfertas.push(i);
+            break;
+        }
+      }
     })
   }
 

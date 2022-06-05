@@ -17,6 +17,7 @@ import { MasComponent } from './components/mas/mas.component';
 import { DetalleOfertasComponent } from './detalle-ofertas/detalle-ofertas.component';
 import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-detalle.component';
 import { DetalleHomeComponent } from './detalle-home/detalle-home.component';
+import { PersonalizarComboComponent } from './personalizar-combo/personalizar-combo.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { DetalleHomeComponent } from './detalle-home/detalle-home.component';
     MasComponent,
     DetalleOfertasComponent,
     PedidosDetalleComponent,
-    DetalleHomeComponent
+    DetalleHomeComponent,
+    PersonalizarComboComponent
   ],
   imports: [
     BrowserModule,

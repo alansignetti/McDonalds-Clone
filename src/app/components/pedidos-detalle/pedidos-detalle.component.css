@@ -1,0 +1,28 @@
+.content{
+    padding-top: 1rem;
+}
+
+.disabled {
+    filter: invert(83%) sepia(4%) saturate(3%) hue-rotate(349deg) brightness(86%) contrast(102%);
+}
+
+.flex-acompaniamientos{
+    display: flex;
+    text-align: center;
+    padding-top: 10%;
+    /*flex: 1;
+    overflow: auto;*/
+}
+
+.acompaniamientos-img{
+    width: "10%";
+}
+
+.contador:hover{
+    background-color: #cecccc;
+}
+
+.personalizarHamburguesa :hover{
+    background-color: #cecccc;
+}
+

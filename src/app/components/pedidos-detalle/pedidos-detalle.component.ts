@@ -36,4 +36,32 @@ export class PedidosDetalleComponent implements OnInit {
       console.log(this.detalleHamburguesa);
     })
   }
+
+  incrementar(){
+    const txt = document.getElementById("item");
+    var numero = Number(txt?.textContent)+1;
+    if(txt?.textContent != undefined){
+      txt.textContent = String(numero);
+    }
+    console.log("Aumenta en uno");
+  }
+
+  decrementar(){
+    const txt = document.getElementById("item");
+    var numero = Number(txt?.textContent);
+    if(numero>0){
+      numero = Number(txt?.textContent)-1;
+    }
+    if(txt?.textContent != undefined){
+      txt.textContent = String(numero);
+    }
+    console.log(" Decrementa en uno");
+  }
+
+  ChangedCheckPapasFritas(event:any){
+    const papas = document.getElementById("papas-fritas")?.classList.toggle("disabled")
+    console.log("Checked:" + event.target.checked);
+  
+    
+  }
 }
