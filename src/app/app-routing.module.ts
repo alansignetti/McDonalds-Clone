@@ -7,6 +7,7 @@ import { MasComponent } from './components/mas/mas.component';
 import { MisCuponesComponent } from './components/mis-cupones/mis-cupones.component';
 import { DetalleOfertasComponent } from './detalle-ofertas/detalle-ofertas.component';
 import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-detalle.component';
+import { PersonalizarComboComponent } from './personalizar-combo/personalizar-combo.component';
 
 
 
@@ -16,9 +17,10 @@ const routes: Routes = [
   {path: 'pedidos', component: PedidosComponent},
   {path: 'ofertas', component: OfertasComponent},
   {path: 'mis-cupones', component: MisCuponesComponent},
-  {path: 'mas', component: MasComponent},
+  {path: 'carrito', component: MasComponent},
   {path: 'detalle-oferta/:variable', component:  DetalleOfertasComponent},
-  {path: 'pedidos/detalle/:variable', component:PedidosDetalleComponent}
+  {path: 'pedidos-detalle/:variable', component:PedidosDetalleComponent},
+  {path: 'personalizar-combo/:variable', component:PersonalizarComboComponent}
   // {path: '**', component: ErrorComponent}
 ];
 

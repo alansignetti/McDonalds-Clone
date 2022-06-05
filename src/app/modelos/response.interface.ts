@@ -5,6 +5,10 @@ export interface ResponseI {
   precio: number;
   tipo: string;
   descripcion: string;
-  ingredientes: string[];
+  ingredientes:[{
+    nombre:string;
+    cantidad:number;
+    precio:number;
+  }];
   seccion: string;
 }
