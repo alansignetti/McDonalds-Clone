@@ -22,7 +22,12 @@
     background-color: #cecccc;
 }
 
-.personalizarHamburguesa :hover{
-    background-color: #cecccc;
+.boton-seccion :hover{   
+    border:1px solid black;  
+}
+
+.personalizarHamburguesa a {
+    text-decoration:none;
+    border-style: none;
 }
 
