@@ -2,21 +2,35 @@
     <img src="assets/img/oferta-amigos-1.png" alt="">
 </div> -->
 
-
 <div class="content content-detalle padding-top">
-
-    <div class="loading carga-ofertas" *ngIf="respuesta == null" >
-        <img id="loading" src="assets/img/loading.gif" alt="loading">
+  <div class="loading carga-ofertas" *ngIf="respuesta == null">
+    <img id="loading" src="assets/img/loading.gif" alt="loading" />
+  </div>
+  <!-- <img src="assets/img/{{respuesta.urlImagen}}.png" alt=""> -->
+  <div *ngIf="respuesta != null">
+    <!-- <p>{{respuesta?.seccion | json}}</p> -->
+    <img src="assets/img/{{ respuesta?.urlImagen }}.png" alt="" />
+    <div class="pais-valido">
+      <img src="assets/img/argentina.png" alt="" />
+      <p>Este cupón es valido solamente en los restaurantes de argentina</p>
     </div>
-    <!-- <img src="assets/img/{{respuesta.urlImagen}}.png" alt=""> -->
-    <div *ngIf="respuesta != null">
-        <!-- <p>{{respuesta?.seccion | json}}</p> -->
-        <img src="assets/img/{{respuesta?.urlImagen}}.png" alt="">
-        <div class="pais-valido">
-            <img src="assets/img/argentina.png" alt="">
-            <p>Este cupón es valido solamente en los restaurantes de argentina</p>
-        </div>
+  </div>
+  <h3 class="titulo-oferta">Para 2 Fans de Cuarto de libra.</h3>
+  <div class="container-opciones">
+    <div class="btn-carrito">
+      <img src="assets/img/Mis Pedidos.png" alt="" />
+      <p>Añadir al carrito</p>
     </div>
-
-
+  </div>
+  <button #asButton class="collapsible" (click)="capture()">
+    Detalles de esta oferta
+  </button>
+  <div #asContentDescripcion class="content-descripcion-oferta">
+    <p>
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur
+      dicta libero maxime in. Pariatur perspiciatis obcaecati vel soluta ratione
+      sapiente impedit! Et sunt voluptates natus tempore ratione consectetur
+      iusto corporis.
+    </p>
+  </div>
 </div>
