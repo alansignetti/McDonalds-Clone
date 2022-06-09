@@ -4,73 +4,80 @@
     Coming <span class="soon">Soon</span>
   </div>
 </div> -->
-<div class="loading" *ngIf="!listaDePromociones.length || !listaDeMcCombos.length || !listaDeMcOfertas.length "  >
-  <img id="loading" src="assets/img/loading.gif" alt="loading">
-</div>
 
 <div class="content pedidos-container">
+  <h2 class="titulo">Promociones</h2>
+  <div
+    class="loading"
+    *ngIf="
+      !listaDePromociones.length ||
+      !listaDeMcCombos.length ||
+      !listaDeMcOfertas.length
+    "
+  >
+    <img id="loading" src="assets/img/loading.gif" alt="loading" />
+  </div>
 
   <div class="promocion">
-    <h2 class="titulo"> Promociones </h2>
-
     <section class="flex-container">
-
       <div class="box">
-
         <ng-container *ngFor="let o of listaDePromociones">
           <div class="hamburguesa">
-            <a [routerLink]="['/','pedidos-detalle',o.id]"><img src="assets/img/{{o.imagen}}.png" alt="{{o.nombre}}"
-                width="100px"></a>
-            <h6 class="encabezado">{{o.nombre}}</h6>
-            <p class="precio">${{o.precio}}</p>
+            <a [routerLink]="['/', 'pedidos-detalle', o.id]"
+              ><img
+                src="assets/img/{{ o.imagen }}.png"
+                alt="{{ o.nombre }}"
+                width="100px"
+            /></a>
+            <h6 class="encabezado">{{ o.nombre }}</h6>
+            <p class="precio">${{ o.precio }}</p>
           </div>
         </ng-container>
-
       </div>
     </section>
   </div>
 
   <div class="MCCombos">
-    <h2 class="titulo"> McCombos </h2>
+    <h2 class="titulo">McCombos</h2>
 
     <section class="flex-container">
       <div class="box">
-
         <ng-container *ngFor="let o of listaDeMcCombos">
           <div class="hamburguesa">
-            <a [routerLink]="['/','pedidos-detalle',o.id]"><img src="assets/img/{{o.imagen}}.png" alt="{{o.nombre}}"
-                width="100px"></a>
-            <h6 class="encabezado">{{o.nombre}}</h6>
-            <p class="precio">${{o.precio}}</p>
+            <a [routerLink]="['/', 'pedidos-detalle', o.id]"
+              ><img
+                src="assets/img/{{ o.imagen }}.png"
+                alt="{{ o.nombre }}"
+                width="100px"
+            /></a>
+            <h6 class="encabezado">{{ o.nombre }}</h6>
+            <p class="precio">${{ o.precio }}</p>
           </div>
         </ng-container>
-
       </div>
-
     </section>
   </div>
 
   <div class="McOfertas">
-    <h2 class="titulo"> McOfertas </h2>
+    <h2 class="titulo">McOfertas</h2>
 
     <section class="flex-container">
       <div class="box">
-
         <ng-container *ngFor="let o of listaDeMcOfertas">
           <div class="hamburguesa">
-            <a [routerLink]="['/','pedidos-detalle',o.id]"><img src="assets/img/{{o.imagen}}.png" alt="{{o.nombre}}"
-                width="100px"></a>
-            <h6 class="encabezado">{{o.nombre}}</h6>
-            <p class="precio">${{o.precio}}</p>
+            <a [routerLink]="['/', 'pedidos-detalle', o.id]"
+              ><img
+                src="assets/img/{{ o.imagen }}.png"
+                alt="{{ o.nombre }}"
+                width="100px"
+            /></a>
+            <h6 class="encabezado">{{ o.nombre }}</h6>
+            <p class="precio">${{ o.precio }}</p>
           </div>
         </ng-container>
-
       </div>
     </section>
-
-
   </div>
-
 
   <!--div class="boton-seccion">
     <img src="assets/img/bolsa-pedido.svg" alt="pedidos" width="15%">
@@ -78,5 +85,4 @@
     <h4 class="titulo" class="btnPedidos">Mis Pedidos</h4>
     <span class="flecha derecha"></span>
   </div-->
-
 </div>

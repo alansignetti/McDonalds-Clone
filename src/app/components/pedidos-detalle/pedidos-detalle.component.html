@@ -1,16 +1,21 @@
-<div class="loading" *ngIf="!detalleHamburguesa.length">
-  <img id="loading" src="assets/img/loading.gif" alt="loading">
-</div>
-
-
-
 <div class="content pedidos-container">
+  <div class="loading" *ngIf="!detalleHamburguesa.length">
+    <img id="loading" src="assets/img/loading.gif" alt="loading" />
+  </div>
+
   <div *ngFor="let h of detalleHamburguesa">
     <div ngClass="flex-detalle">
-      <h1>{{h.nombre}}</h1>
-      <p>$ {{h.precio}}
-        <img class="img-detalle" src="assets/img/{{h.imagen}}.png" alt={{h.imagen}}>
-      <p>{{h.descripcion}}</p>
+      <h1>{{ h.nombre }}</h1>
+      <p>
+        $ {{ h.precio }}
+        <img
+          class="img-detalle"
+          src="assets/img/{{ h.imagen }}.png"
+          alt="{{ h.imagen }}"
+        />
+      </p>
+
+      <p>{{ h.descripcion }}</p>
     </div>
   </div>
 
@@ -20,14 +25,19 @@
     <button class="contador" (click)="incrementar()">+</button>
   </div>
 
-  <div class="personalizarHamburguesa" style="padding-top:10%;">
+  <div class="personalizarHamburguesa" style="padding-top: 10%">
     <div *ngFor="let h of detalleHamburguesa">
-      <a [routerLink]="['/','personalizar-combo',h.id]">
+      <a [routerLink]="['/', 'personalizar-combo', h.id]">
         <div class="boton-seccion">
-          <img src="assets/img/icono-hamburguesa.png" alt="pedidos" width="15%">
+          <img
+            src="assets/img/icono-hamburguesa.png"
+            alt="pedidos"
+            width="15%"
+          />
           <h4 class="titulo" class="btnPedidos">Personalizar Combo</h4>
           <span class="flecha derecha"></span>
         </div>
       </a>
     </div>
   </div>
+</div>
