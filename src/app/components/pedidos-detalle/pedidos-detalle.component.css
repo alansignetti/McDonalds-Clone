@@ -22,7 +22,7 @@
     background-color: #cecccc;
 }
 
-.boton-seccion :hover{   
+.boton-seccion:hover{   
     border:1px solid black;  
 }
 
