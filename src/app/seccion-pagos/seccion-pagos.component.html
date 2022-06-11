@@ -1,0 +1,149 @@
+<div class="content padding-top">
+  <div class="container p-0">
+    <div class="card px-4">
+      <p class="h8 py-3">Métodos de pago</p>
+      <div class="flex-tipo-pagos" id="opciones">
+        <input
+          type="radio"
+          name="opc"
+          value="1"
+          (change)="mostrar(1)"
+          checked
+        />Transferencia
+        <input type="radio" name="opc" value="2" (change)="mostrar(2)" />Tarjeta
+        de debito
+      </div>
+      <!--SECCION TRANSFERENCIA-->
+      <div class="row gx-3" *ngIf="dato == 1">
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Nombre del titular</p>
+            <input
+              class="form-control mb-3"
+              type="text"
+              placeholder="Name"
+              value="Barry"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Apellido del titular</p>
+            <input
+              class="form-control mb-3"
+              type="text"
+              placeholder="Name"
+              value="Allen"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">DNI</p>
+            <input
+              class="form-control mb-3"
+              type="number"
+              [maxLength]="8"
+              placeholder="11222333"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">CBU</p>
+            <input
+              class="form-control mb-3"
+              type="text"
+              placeholder="1111222233334444555566"
+              [maxLength]="22"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Banco</p>
+            <input
+              class="form-control mb-3 pt-2"
+              type="text"
+              placeholder="Banco S.A"
+              maxlength="25"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary mb-3">
+            <span class="ps-3"><b>Pagar</b></span>
+            <span class="fas fa-arrow-right"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- FIN SECCION TRANSFERENCIA-->
+
+      <div class="row gx-3" *ngIf="dato == 2">
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Nombre</p>
+            <input
+              class="form-control mb-3"
+              type="text"
+              placeholder="Name"
+              value="Barry"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Apellido</p>
+            <input
+              class="form-control mb-3"
+              type="text"
+              placeholder="Name"
+              value="Allen"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Numero de tarjeta</p>
+            <input
+              class="form-control mb-3"
+              type="number"
+              [maxLength]="16"
+              placeholder="1234 5678 435678"
+            />
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">Fecha de expiración</p>
+            <input
+              class="form-control mb-3"
+              type="text"
+              placeholder="MM/YYYY"
+              [maxLength]="7"
+            />
+          </div>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-4">
+          <div class="d-flex flex-column">
+            <p class="text mb-1">CVV/CVC</p>
+            <input
+              class="form-control mb-3 pt-2"
+              type="password"
+              placeholder="***"
+              maxlength="3"
+            />
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary mb-3">
+            <span class="ps-3"><b>Pagar</b></span>
+            <span class="fas fa-arrow-right"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

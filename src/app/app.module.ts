@@ -18,6 +18,7 @@ import { DetalleOfertasComponent } from './detalle-ofertas/detalle-ofertas.compo
 import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-detalle.component';
 import { DetalleHomeComponent } from './detalle-home/detalle-home.component';
 import { PersonalizarComboComponent } from './personalizar-combo/personalizar-combo.component';
+import { SeccionPagosComponent } from './seccion-pagos/seccion-pagos.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { PersonalizarComboComponent } from './personalizar-combo/personalizar-co
     DetalleOfertasComponent,
     PedidosDetalleComponent,
     DetalleHomeComponent,
-    PersonalizarComboComponent
+    PersonalizarComboComponent,
+    SeccionPagosComponent
   ],
   imports: [
     BrowserModule,

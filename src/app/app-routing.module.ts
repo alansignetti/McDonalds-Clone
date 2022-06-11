@@ -9,6 +9,7 @@ import { DetalleOfertasComponent } from './detalle-ofertas/detalle-ofertas.compo
 import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-detalle.component';
 import { PersonalizarComboComponent } from './personalizar-combo/personalizar-combo.component';
 import { DetalleHomeComponent } from './detalle-home/detalle-home.component';
+import { SeccionPagosComponent } from './seccion-pagos/seccion-pagos.component';
 
 
 
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: 'pedidos-detalle/:variable', component:PedidosDetalleComponent},
   {path: 'personalizar-combo/:variable', component:PersonalizarComboComponent},
   { path: 'detalle-home/:id', component: DetalleHomeComponent },
-  { path: '**', redirectTo: 'home' },
+  { path: 'formas-pago', component: SeccionPagosComponent},
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
