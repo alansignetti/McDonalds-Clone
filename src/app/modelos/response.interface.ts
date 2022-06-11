@@ -5,10 +5,13 @@ export interface ResponseI {
   precio: number;
   tipo: string;
   descripcion: string;
-  ingredientes:[{
-    nombre:string;
-    cantidad:number;
-    precio:number;
-  }];
+  ingredientes: [
+    {
+      nombre: string;
+      cantidad: number;
+      precio: number;
+      aderezo?: boolean;
+    }
+  ];
   seccion: string;
 }

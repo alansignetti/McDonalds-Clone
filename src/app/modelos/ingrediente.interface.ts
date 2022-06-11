@@ -1,5 +1,5 @@
 export interface IngredienteI {
-    nombre: string;
-    precio: number;
-    cantidad:number;
-} 
+  nombre: string;
+  precio: number;
+  cantidad: number;
+}

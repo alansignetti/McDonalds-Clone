@@ -1,0 +1,24 @@
+/* vista pc */
+@media (min-width: 440px) {
+  .contenedor {
+    height: 400px !important;
+    width: 340px !important;
+    overflow: auto;
+  }
+  .media,
+  .media .media {
+    margin-top: 0;
+  }
+}
+.text-right {
+  text-align: right;
+}
+.thumbnail {
+  transition: none;
+}
+
+@media (max-width: 500px) {
+  .table-responsive {
+    height: 100vh;
+  }
+}

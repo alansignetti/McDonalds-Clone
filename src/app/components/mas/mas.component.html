@@ -1,13 +1,84 @@
-<div class="object">
-  <div class="object-rope"></div>
-  <div class="object-shape">
-    Coming <span class="soon">Soon</span>
+<div id="top"></div>
+<div class="media-body media">
+  <div class="contenedor media media-body">
+    <h3 class="text-center">Carrito</h3>
+    <div class="table-responsive">
+      <div class="content-empty" *ngIf="carritoVacio">
+        <h5 class="text-center">Tu carrito está vacío</h5>
+      </div>
+      <table class="table table-hover media media-body" *ngIf="!carritoVacio">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th class="text-center">Cantidad</th>
+            <th class="text-center">Total</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- fila producto -->
+          <tr *ngFor="let h of carrito">
+            <td class="">
+              <div class="media">
+                <a class="thumbnail pull-left">
+                  <img
+                    class="media-object"
+                    src="assets/img/{{ h.imagen }}.png"
+                    alt="{{ h.imagen }}"
+                    style="width: 110px; height: 110px"
+                  />
+                </a>
+                <div class="">
+                  <h6 class="media-heading">{{ h.nombre }}</h6>
+                </div>
+              </div>
+            </td>
+            <td class="" style="text-align: center">
+              <p class="">{{ h.cantidad }}</p>
+            </td>
+            <td class="text-center">
+              <strong>${{ h.precioTotal }}</strong>
+            </td>
+          </tr>
+          <!-- fila producto -->
+
+          <!-- total-->
+          <tr>
+            <td> </td>
+            <td><h3>Total</h3></td>
+            <td class="text-right">
+              <h3>
+                <strong>${{ total }}</strong>
+              </h3>
+            </td>
+          </tr>
+          <!-- total-->
+
+          <!-- boton pagar-->
+          <tr class="col-md-2 col-lg-2">
+            <td colspan="1">
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="vaciarCarrito()"
+              >
+                Vaciar carrito<span class="glyphicon glyphicon-play"></span>
+              </button>
+            </td>
+            <!-- <td> </td> -->
+            <td colspan="2" class="text-right">
+              <button
+                type="button"
+                class="btn btn-success"
+                [routerLink]="['/', 'formas-pago']"
+              >
+                Ir a pagar<span class="glyphicon glyphicon-play"></span>
+              </button>
+            </td>
+            <!-- boton pagar-->
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
-
-<div class="content">
-
-<h2 class="message">Estamos Trabajando!</h2>
-
-
 </div>

@@ -48,27 +48,27 @@
 }
 
 .footer {
-  width: 100%;
+  width: 100% !important;
   background-color: #fff;
   /* background-color: aqua; */
-  margin: 0;
-  height: 60px;
-  position: sticky;
+  margin: 0 !important;
+  height: 60px !important;
+  position: sticky !important;
   bottom: 0;
-  z-index: 999;
-  padding-left: 5px;
-  padding-right: 5px;
+  z-index: 999 !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
   /* margin-top: 4px; */
-  padding-top: 10px;
-  display: flex;
-  flex-direction: row;
+  padding-top: 10px !important;
+  display: flex !important;
+  flex-direction: row !important;
 }
 .opcion {
-  margin-left: 15px;
+  margin-left: 15px !important;
 }
 .opciones-footer {
-  display: flex;
-  cursor: pointer;
+  display: flex !important;
+  cursor: pointer !important;
 }
 .opciones-footer a {
   text-decoration: none;
@@ -76,11 +76,11 @@
   font-family: arial, helvetica, sans-serif;
   font-weight: 500;
   cursor: pointer;
-  position: relative;
-  display: block;
+  position: relative !important;
+  display: block !important;
   font-size: 12px;
-  text-align: center;
-  justify-content: space-between;
+  text-align: center !important;
+  justify-content: space-between !important;
 }
 /* .footer-home{
   text-align:center;
@@ -110,21 +110,21 @@
   margin: 0px auto;
 } */
 .footer-logo {
-  width: 40px;
+  width: 40px !important;
 }
 #logo-mis-cupones {
-  margin-left: 15px;
+  margin-left: 15px !important;
 }
 #logo-ofertas {
-  width: 30px;
+  width: 30px !important;
 }
 
 #logo-carrito {
-  width: 30px;
-  margin-left: 11px;
+  width: 30px !important;
+  margin-left: 11px !important;
 }
 .footer-mas a {
-  margin-left: 8px;
+  margin-left: 8px !important;
 }
 
 .home {
@@ -207,6 +207,10 @@
     /* height: 100%; */
     height: max-content;
   }
+  .content-empty {
+    height: 100vh;
+    /* height: max-content; */
+  }
   html {
     height: 100%;
   }
@@ -238,6 +242,10 @@
   .opcion {
     margin-left: 25px;
   }
+}
+.content-empty {
+  margin-top: 50px;
+  width: 100%;
 }
 
 /* vista pc */
