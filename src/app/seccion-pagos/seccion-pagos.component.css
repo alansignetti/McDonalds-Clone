@@ -1,6 +1,6 @@
-.padding-top{
-    padding-top: 1.5rem;
-    overflow-y: auto;
+.padding-top {
+  padding-top: 1.5rem;
+  overflow-y: auto;
 }
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 
@@ -45,14 +45,14 @@ p {
   align-items: center;
   justify-content: center;
   padding: 0 15px;
-  background-color: rgba(255,188,13,255);
+  background-color: rgba(255, 188, 13, 255);
   border: none;
   transition: 0.5s;
   background-size: 200% auto;
 }
 
-.btn.btn-primary span{
-    color: rgb(0, 0, 0);
+.btn.btn-primary span {
+  color: rgb(0, 0, 0);
 }
 
 .btn.btn-primary:hover .fas.fa-arrow-right {
@@ -81,25 +81,33 @@ p {
   font-weight: 600;
 }
 
+@media (min-width: 440px) {
+  .container,
+  .navbar-static-top .container,
+  .navbar-fixed-top .container,
+  .navbar-fixed-bottom .container {
+    width: 90%;
+  }
+}
 ::placeholder {
   font-size: 14px;
   font-weight: 600;
 }
 
-.flex-tipo-pagos{
-    padding: 22px 5px 22px 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.flex-tipo-pagos {
+  padding: 22px 5px 22px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.container-error i{
+.container-error i {
   color: tomato;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
