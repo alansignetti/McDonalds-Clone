@@ -1,15 +1,29 @@
-.padding-top {
-  padding-top: 1.5rem;
-  overflow-y: auto;
-  align-items: flex-start;
+/* vista pc */
+@media (min-width: 440px) {
+  .contenedor {
+    height: 400px !important;
+    width: 340px !important;
+    overflow: auto;
+  }
+  .media,
+  .media .media {
+    margin-top: 0;
+  }
 }
+.text-right {
+  text-align: right;
+}
+.thumbnail {
+  transition: none;
+}
+/* .row {
+  height: 100% !important;
+  width: 340px !important;
 
-.content {
-  width: 100%;
 }
-
-.pagar {
-  width: 100%;
-  background-color: #ffc72c;
-  border: none;
-}
+table,
+.table,
+.table-hover,
+body {
+  width: 340px !important;
+} */

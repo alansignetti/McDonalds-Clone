@@ -42,11 +42,19 @@
     </div>
   </div>
 
-  <button
+  <!-- <button
     class="confirmar-pedido"
     (click)="guardarLocalStorage()"
     [routerLink]="['/', 'home']"
   >
     Confirmar
+  </button> -->
+  <button
+    class="btn-carrito"
+    (click)="guardarLocalStorage()"
+    [routerLink]="['/', 'home']"
+  >
+    <img src="assets/img/Mis Pedidos.png" alt="" />
+    <p>Añadir al carrito</p>
   </button>
 </div>

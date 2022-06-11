@@ -1,16 +1,70 @@
-<div class="home">
-  <h3>Carrito</h3>
+<div class="media-body media">
+  <div class="contenedor media media-body">
+    <div class="table-responsive">
+      <table class="table table-hover media media-body">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th class="text-center">Cantidad</th>
 
-  <div ngClass="combos" *ngFor="let h of carrito">
-    <div ngClass="mc-combo">
-      <p ngClass="mc-combo-nombre">{{ h.nombre }}</p>
-      <img src="assets/img/{{ h.imagen }}.png" alt="{{ h.imagen }}" />
-      <p ngClass="mc-combo-precio">$ {{ h.precioTotal }}</p>
+            <th class="text-center">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- fila producto -->
+          <tr *ngFor="let h of carrito">
+            <td class="">
+              <div class="media">
+                <a class="thumbnail pull-left">
+                  <img
+                    class="media-object"
+                    src="assets/img/{{ h.imagen }}.png"
+                    alt="{{ h.imagen }}"
+                    style="width: 110px; height: 110px"
+                  />
+                </a>
+                <div class="">
+                  <h6 class="media-heading">{{ h.nombre }}</h6>
+                </div>
+              </div>
+            </td>
+            <td class="" style="text-align: center">
+              <p class="">{{ h.cantidad }}</p>
+            </td>
+            <td class="text-center">
+              <strong>${{ h.precioTotal }}</strong>
+            </td>
+          </tr>
+          <!-- fila producto -->
+
+          <!-- total-->
+          <tr>
+            <td> </td>
+            <td><h3>Total</h3></td>
+            <td class="text-right">
+              <h3>
+                <strong>${{ total }}</strong>
+              </h3>
+            </td>
+          </tr>
+          <!-- total-->
+
+          <!-- boton pagar-->
+          <tr class="col-md-2 col-lg-2">
+            <td> </td>
+            <td colspan="2" class="text-right">
+              <button
+                type="button"
+                class="btn btn-success"
+                [routerLink]="['/', 'formas-pago']"
+              >
+                Ir a pagar<span class="glyphicon glyphicon-play"></span>
+              </button>
+            </td>
+            <!-- boton pagar-->
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <!--tiene q estar fuera del for -->
-  <h3>$ {{ total }}</h3>
-  <button class="pagar" [routerLink]="['/', 'formas-pago']">
-    Realizar Pedido
-  </button>
 </div>

@@ -11,25 +11,28 @@ import { PersonalizarComboComponent } from './personalizar-combo/personalizar-co
 import { DetalleHomeComponent } from './detalle-home/detalle-home.component';
 import { SeccionPagosComponent } from './seccion-pagos/seccion-pagos.component';
 
-
-
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'pedidos', component: PedidosComponent },
   { path: 'ofertas', component: OfertasComponent },
   { path: 'mis-cupones', component: MisCuponesComponent },
-  {path: 'carrito', component: MasComponent},
-  {path: 'detalle-oferta/:variable', component:  DetalleOfertasComponent},
-  {path: 'pedidos-detalle/:variable', component:PedidosDetalleComponent},
-  {path: 'personalizar-combo/:variable', component:PersonalizarComboComponent},
+  { path: 'carrito', component: MasComponent },
+  { path: 'detalle-oferta/:variable', component: DetalleOfertasComponent },
+  { path: 'pedidos-detalle/:variable', component: PedidosDetalleComponent },
+  {
+    path: 'personalizar-combo/:variable',
+    component: PersonalizarComboComponent,
+  },
   { path: 'detalle-home/:id', component: DetalleHomeComponent },
-  { path: 'formas-pago', component: SeccionPagosComponent},
-  { path: '**', redirectTo: 'home' }
+  { path: 'formas-pago', component: SeccionPagosComponent },
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }), //top
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
