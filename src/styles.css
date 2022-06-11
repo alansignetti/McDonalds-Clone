@@ -207,6 +207,10 @@
     /* height: 100%; */
     height: max-content;
   }
+  .content-empty {
+    height: 100vh;
+    /* height: max-content; */
+  }
   html {
     height: 100%;
   }
@@ -238,6 +242,10 @@
   .opcion {
     margin-left: 25px;
   }
+}
+.content-empty {
+  margin-top: 50px;
+  width: 100%;
 }
 
 /* vista pc */

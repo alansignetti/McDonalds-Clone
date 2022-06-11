@@ -1,15 +1,19 @@
 <div class="media-body media">
   <div class="contenedor media media-body">
+    <h3 class="text-center">Carrito</h3>
     <div class="table-responsive">
-      <table class="table table-hover media media-body">
+      <div class="content-empty" *ngIf="carritoVacio">
+        <h5 class="text-center">Tu carrito está vacío</h5>
+      </div>
+      <table class="table table-hover media media-body" *ngIf="!carritoVacio">
         <thead>
           <tr>
             <th>Producto</th>
             <th class="text-center">Cantidad</th>
-
             <th class="text-center">Total</th>
           </tr>
         </thead>
+
         <tbody>
           <!-- fila producto -->
           <tr *ngFor="let h of carrito">
@@ -51,7 +55,16 @@
 
           <!-- boton pagar-->
           <tr class="col-md-2 col-lg-2">
-            <td> </td>
+            <td colspan="1">
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="vaciarCarrito()"
+              >
+                Vaciar carrito<span class="glyphicon glyphicon-play"></span>
+              </button>
+            </td>
+            <!-- <td> </td> -->
             <td colspan="2" class="text-right">
               <button
                 type="button"
