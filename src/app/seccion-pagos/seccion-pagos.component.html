@@ -14,69 +14,148 @@
         de debito
       </div>
       <!--SECCION TRANSFERENCIA-->
-      <div class="row gx-3" *ngIf="dato == 1">
+      <form [formGroup]="formGroup" class="row gx-3" *ngIf="dato == 1">
         <div class="col-12">
           <div class="d-flex flex-column">
             <p class="text mb-1">Nombre del titular</p>
             <input
+              id="nombre"
+              name="nombre"
               class="form-control mb-3"
               type="text"
               placeholder="Name"
               value="Barry"
+              formControlName="nombre"
             />
+            <div class="container-errores">
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('nombre')?.touched && formGroup.get('nombre')?.errors?.['required']"
+              >
+                <i>El nombre es requerido</i>
+              </div>
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('nombre')?.touched && (formGroup.get('nombre')?.errors?.['minlength'] || formGroup.get('nombre')?.errors?.['maxlength'])"
+              >
+                <i>Debe tener entre 3 y 20 caracteres</i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-12">
           <div class="d-flex flex-column">
             <p class="text mb-1">Apellido del titular</p>
             <input
+              id="apellido"
+              name="apellido"
               class="form-control mb-3"
               type="text"
-              placeholder="Name"
+              placeholder="Apellido"
               value="Allen"
+              formControlName="apellido"
             />
+            <div class="container-errores">
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('apellido')?.touched && formGroup.get('apellido')?.errors?.['required']"
+              >
+                <i>El apellido es requerido</i>
+              </div>
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('apellido')?.touched && (formGroup.get('apellido')?.errors?.['minlength'] || formGroup.get('apellido')?.errors?.['maxlength'])"
+              >
+                <i>Debe tener entre 3 y 20 caracteres</i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-12">
           <div class="d-flex flex-column">
             <p class="text mb-1">DNI</p>
             <input
+              id="dni"
+              name="dni"
               class="form-control mb-3"
-              type="number"
-              [maxLength]="8"
+              type="text"
+              maxlength="8"
               placeholder="11222333"
+              formControlName="dni"
             />
+            <div class="container-errores">
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('dni')?.touched && formGroup.get('dni')?.errors?.['required']"
+              >
+                <i>El DNI es requerido</i>
+              </div>
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('dni')?.touched && (formGroup.get('dni')?.errors?.['minlength'] || formGroup.get('dni')?.errors?.['maxlength'])"
+              >
+                <i>Debe tener entre 3 y 20 caracteres</i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-12">
           <div class="d-flex flex-column">
             <p class="text mb-1">CBU</p>
             <input
+              id="cbu"
+              name="cbu"
               class="form-control mb-3"
               type="text"
               placeholder="1111222233334444555566"
-              [maxLength]="22"
+              maxlength="22"
+              formControlName="cbu"
             />
+            <div class="container-errores">
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('cbu')?.touched && formGroup.get('cbu')?.errors?.['required']"
+              >
+                <i>El CBU es requerido</i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-12">
           <div class="d-flex flex-column">
             <p class="text mb-1">Banco</p>
             <input
+              id="banco"
+              name="banco"
               class="form-control mb-3 pt-2"
               type="text"
               placeholder="Banco S.A"
+              formControlName="banco"
               maxlength="25"
             />
+            <div class="container-errores">
+              <div
+                class="container-error"
+                *ngIf="formGroup.get('banco')?.touched && formGroup.get('banco')?.errors?.['required']"
+              >
+                <i>El Banco es requerido</i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-12">
-          <button class="btn btn-primary mb-3">
+          <button
+            [routerLink]="['/', 'home']"
+            type="submit"
+            class="btn btn-primary mb-3"
+            [disabled]="formGroup.invalid"
+            (click)="pagar()"
+          >
             <span class="ps-3"><b>Pagar</b></span>
             <span class="fas fa-arrow-right"></span>
           </button>
         </div>
-      </div>
+      </form>
 
       <!-- FIN SECCION TRANSFERENCIA-->
 
@@ -138,7 +217,13 @@
           </div>
         </div>
         <div class="col-12">
-          <button class="btn btn-primary mb-3">
+          <button
+            [routerLink]="['/', 'home']"
+            type="submit"
+            class="btn btn-primary mb-3"
+            [disabled]="formGroup.invalid"
+            (click)="pagar()"
+          >
             <span class="ps-3"><b>Pagar</b></span>
             <span class="fas fa-arrow-right"></span>
           </button>

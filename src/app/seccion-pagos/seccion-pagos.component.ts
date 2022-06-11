@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import swal from 'sweetalert';
+
 
 @Component({
   selector: 'app-seccion-pagos',
@@ -7,25 +10,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeccionPagosComponent implements OnInit {
   public dato: number = 1;
-  constructor() { }
+  formGroup!: FormGroup;
+
+  constructor(private readonly fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.formGroup = this.initForm();
+  }
+
+  initForm(): FormGroup {
+    return this.fb.group({
+      nombre: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      apellido: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+      dni: ['', [Validators.required]],
+      cbu: ['', [Validators.required]],
+      banco: ['', [Validators.required,Validators.minLength(5), Validators.maxLength(20)]]
+    })
   }
 
   public mostrar(dato: any) {
     this.dato = dato;
-    if (dato!= undefined) {
-      // document.getElementById("nombre").style.display = "block";
-      // document.getElementById("apellidos").style.display = "none";
-      // document.getElementById("edad").style.display = "none";
-
-      // const txt = document.getElementById("item");
-      // var numero = Number(txt?.textContent)+1;
-      // if(txt?.textContent != undefined){
-      //   txt.textContent = String(numero);
-      // }
-      console.log(dato);
   }
-}
+
+  public pagar() {
+    localStorage.clear();
+    swal("¡Pago realizado!", "", "success");
+
+  }
 
 }

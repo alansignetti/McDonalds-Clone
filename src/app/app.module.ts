@@ -19,6 +19,7 @@ import { PedidosDetalleComponent } from './components/pedidos-detalle/pedidos-de
 import { DetalleHomeComponent } from './detalle-home/detalle-home.component';
 import { PersonalizarComboComponent } from './personalizar-combo/personalizar-combo.component';
 import { SeccionPagosComponent } from './seccion-pagos/seccion-pagos.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -41,7 +42,9 @@ import { SeccionPagosComponent } from './seccion-pagos/seccion-pagos.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
