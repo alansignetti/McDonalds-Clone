@@ -29,6 +29,8 @@ export class PedidosDetalleComponent implements OnInit {
       id: this.hamburguesa.id,
       cantidad: this.cantidad,
       precioTotal: this.precioTotal,
+      nombre: this.hamburguesa.nombre,
+      imagen: this.hamburguesa.imagen,
     };
     localStorage.setItem('pedido-detalle', JSON.stringify(pedidoDetalle));
   }

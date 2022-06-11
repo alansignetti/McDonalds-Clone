@@ -1,13 +1,16 @@
-<div class="object">
-  <div class="object-rope"></div>
-  <div class="object-shape">
-    Coming <span class="soon">Soon</span>
+<div class="home">
+  <h3>Carrito</h3>
+
+  <div ngClass="combos" *ngFor="let h of carrito">
+    <div ngClass="mc-combo">
+      <p ngClass="mc-combo-nombre">{{ h.nombre }}</p>
+      <img src="assets/img/{{ h.imagen }}.png" alt="{{ h.imagen }}" />
+      <p ngClass="mc-combo-precio">$ {{ h.precioTotal }}</p>
+    </div>
   </div>
-</div>
-
-<div class="content">
-
-<h2 class="message">Estamos Trabajando!</h2>
-
-
+  <!--tiene q estar fuera del for -->
+  <h3>$ {{ total }}</h3>
+  <button class="pagar" [routerLink]="['/', 'formas-pago']">
+    Realizar Pedido
+  </button>
 </div>

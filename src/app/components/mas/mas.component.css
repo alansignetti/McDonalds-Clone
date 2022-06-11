@@ -1,0 +1,15 @@
+.padding-top {
+  padding-top: 1.5rem;
+  overflow-y: auto;
+  align-items: flex-start;
+}
+
+.content {
+  width: 100%;
+}
+
+.pagar {
+  width: 100%;
+  background-color: #ffc72c;
+  border: none;
+}
