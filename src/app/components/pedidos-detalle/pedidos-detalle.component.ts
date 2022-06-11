@@ -6,62 +6,73 @@ import { ResponseI } from './../../modelos/response.interface';
 @Component({
   selector: 'app-pedidos-detalle',
   templateUrl: './pedidos-detalle.component.html',
-  styleUrls: ['./pedidos-detalle.component.css']
+  styleUrls: ['./pedidos-detalle.component.css'],
 })
 export class PedidosDetalleComponent implements OnInit {
+  public hamburguesa!: ResponseI;
 
-  detalleHamburguesa: ResponseI[] = [];
-
-  constructor(private route:ActivatedRoute,private _apiService:ApiService) { }
-
-  ngOnInit(): void {
-    
+  public cantidad: number = 1;
+  public precioTotal: number = 0;
+  constructor(private route: ActivatedRoute, private _apiService: ApiService) {
     this.getParam();
-    
   }
 
-  private getParam(){
-    this.route.paramMap.subscribe((paramMap:any) => {
-      const{params} = paramMap;
-      console.log(params.variable); 
+  ngOnInit(): void {}
+
+  public actualizarPrecioTotal() {
+    this.precioTotal = this.hamburguesa.precio * this.cantidad;
+  }
+
+  public guardarLocalStorage() {
+    //creo variable para guardar en localstorage
+    const pedidoDetalle = {
+      id: this.hamburguesa.id,
+      cantidad: this.cantidad,
+      precioTotal: this.precioTotal,
+    };
+    localStorage.setItem('pedido-detalle', JSON.stringify(pedidoDetalle));
+  }
+  private getParam() {
+    this.route.paramMap.subscribe((paramMap: any) => {
+      const { params } = paramMap;
       this.getDataHamburguesa(params.variable);
-    })
+    });
   }
   //Obtenemos los detalles de la hamburguesa en base a su Id.
-  private getDataHamburguesa(id:any): void{
-    this._apiService.getDataHamburguesa(id).subscribe((res:any) =>{
-      this.detalleHamburguesa.push(res);
-
-      // REVISAR LOS DATOS DEL FRONTEND
-      console.log(this.detalleHamburguesa);
-    })
+  private getDataHamburguesa(id: any): void {
+    this._apiService.getDataHamburguesa(id).subscribe((res: any) => {
+      this.hamburguesa = res; // guardo la hamburguesa
+      this.precioTotal = this.hamburguesa.precio;
+    });
   }
 
-  incrementar(){
-    const txt = document.getElementById("item");
-    var numero = Number(txt?.textContent)+1;
-    if(txt?.textContent != undefined){
+  incrementar() {
+    const txt = document.getElementById('item');
+    var numero = Number(txt?.textContent) + 1;
+    if (txt?.textContent != undefined) {
       txt.textContent = String(numero);
     }
-    console.log("Aumenta en uno");
+    this.cantidad = numero;
+    this.actualizarPrecioTotal();
   }
 
-  decrementar(){
-    const txt = document.getElementById("item");
+  decrementar() {
+    const txt = document.getElementById('item');
     var numero = Number(txt?.textContent);
-    if(numero>0){
-      numero = Number(txt?.textContent)-1;
+    if (numero > 1) {
+      numero = Number(txt?.textContent) - 1;
     }
-    if(txt?.textContent != undefined){
+    if (txt?.textContent != undefined) {
       txt.textContent = String(numero);
     }
-    console.log(" Decrementa en uno");
+    this.cantidad = numero;
+    this.actualizarPrecioTotal();
   }
 
-  ChangedCheckPapasFritas(event:any){
-    const papas = document.getElementById("papas-fritas")?.classList.toggle("disabled")
-    console.log("Checked:" + event.target.checked);
-  
-    
+  ChangedCheckPapasFritas(event: any) {
+    const papas = document
+      .getElementById('papas-fritas')
+      ?.classList.toggle('disabled');
+    // console.log('Checked:' + event.target.checked);
   }
 }

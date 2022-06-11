@@ -1,25 +1,19 @@
-
-
-
 <div class="home">
   <h3>McCombos</h3>
 
-  <div class="loading" *ngIf="!listaHamburguesas.length" >
-    <img id="loading" src="assets/img/loading.gif" alt="loading">
+  <div class="loading" *ngIf="!listaHamburguesas.length">
+    <img id="loading" src="assets/img/loading.gif" alt="loading" />
   </div>
-
 
   <div ngClass="combos" *ngFor="let h of listaHamburguesas">
-
     <div ngClass="mc-combo">
-      <p ngClass="mc-combo-nombre">{{h.nombre}}</p>
-      <img src="assets/img/{{h.imagen}}.png" alt={{h.imagen}} [routerLink]="['/detalle-home', h.id]">
-      <p ngClass="mc-combo-precio">$ {{h.precio}}</p>
+      <p ngClass="mc-combo-nombre">{{ h.nombre }}</p>
+      <img
+        src="assets/img/{{ h.imagen }}.png"
+        alt="{{ h.imagen }}"
+        [routerLink]="['/pedidos-detalle', h.id]"
+      />
+      <p ngClass="mc-combo-precio">$ {{ h.precio }}</p>
     </div>
   </div>
-
-
-
-
-
 </div>

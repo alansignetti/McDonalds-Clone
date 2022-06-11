@@ -1,21 +1,21 @@
 <div class="content pedidos-container">
-  <div class="loading" *ngIf="!detalleHamburguesa.length">
+  <div class="loading" *ngIf="!hamburguesa">
     <img id="loading" src="assets/img/loading.gif" alt="loading" />
   </div>
 
-  <div *ngFor="let h of detalleHamburguesa">
+  <div *ngIf="hamburguesa">
     <div ngClass="flex-detalle">
-      <h1>{{ h.nombre }}</h1>
+      <h3>{{ hamburguesa?.nombre }}</h3>
       <p>
-        $ {{ h.precio }}
+        $ {{ hamburguesa?.precio }}
         <img
           class="img-detalle"
-          src="assets/img/{{ h.imagen }}.png"
-          alt="{{ h.imagen }}"
+          src="assets/img/{{ hamburguesa?.imagen }}.png"
+          alt="{{ hamburguesa?.imagen }}"
         />
       </p>
 
-      <p>{{ h.descripcion }}</p>
+      <p>{{ hamburguesa?.descripcion }}</p>
     </div>
   </div>
 
@@ -26,15 +26,17 @@
   </div>
 
   <div class="personalizarHamburguesa" style="padding-top: 10%">
-    <div *ngFor="let h of detalleHamburguesa">
-      <a [routerLink]="['/', 'personalizar-combo', h.id]">
+    <div>
+      <a [routerLink]="['/', 'personalizar-combo', hamburguesa?.id]">
         <div class="boton-seccion">
           <img
             src="assets/img/icono-hamburguesa.png"
             alt="pedidos"
             width="15%"
           />
-          <h4 class="titulo" class="btnPedidos">Personalizar Combo</h4>
+          <h4 class="titulo" class="btnPedidos" (click)="guardarLocalStorage()">
+            Personalizar Combo
+          </h4>
           <span class="flecha derecha"></span>
         </div>
       </a>

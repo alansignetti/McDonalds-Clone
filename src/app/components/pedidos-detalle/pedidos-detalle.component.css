@@ -1,33 +1,33 @@
-.content{
-    padding-top: 1rem;
+.content {
+  padding-top: 1rem;
 }
 
 .disabled {
-    filter: invert(83%) sepia(4%) saturate(3%) hue-rotate(349deg) brightness(86%) contrast(102%);
+  filter: invert(83%) sepia(4%) saturate(3%) hue-rotate(349deg) brightness(86%)
+    contrast(102%);
 }
 
-.flex-acompaniamientos{
-    display: flex;
-    text-align: center;
-    padding-top: 10%;
-    /*flex: 1;
+.flex-acompaniamientos {
+  display: flex;
+  text-align: center;
+  padding-top: 10%;
+  /*flex: 1;
     overflow: auto;*/
 }
 
-.acompaniamientos-img{
-    width: "10%";
+.acompaniamientos-img {
+  width: 10%;
 }
 
-.contador:hover{
-    background-color: #cecccc;
+.contador:hover {
+  background-color: #cecccc;
 }
 
-.boton-seccion:hover{   
-    border:1px solid black;  
+.boton-seccion:hover {
+  border: 1px solid black;
 }
 
 .personalizarHamburguesa a {
-    text-decoration:none;
-    border-style: none;
+  text-decoration: none;
+  border-style: none;
 }
-
