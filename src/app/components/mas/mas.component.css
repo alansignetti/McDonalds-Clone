@@ -16,14 +16,9 @@
 .thumbnail {
   transition: none;
 }
-/* .row {
-  height: 100% !important;
-  width: 340px !important;
 
+@media (max-width: 500px) {
+  .table-responsive {
+    height: 100vh;
+  }
 }
-table,
-.table,
-.table-hover,
-body {
-  width: 340px !important;
-} */

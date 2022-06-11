@@ -42,5 +42,10 @@ export class MasComponent implements OnInit {
     localStorage.clear();
     this.carritoVacio = true; //vacio el carrito
     this.getCarrito();
+    let top = document.getElementsByTagName('router-outlet')[0];
+    if (top !== null) {
+      top.scrollIntoView();
+      // top = null;
+    }
   }
 }
