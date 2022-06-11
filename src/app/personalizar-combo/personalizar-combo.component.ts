@@ -57,7 +57,6 @@ export class PersonalizarComboComponent implements OnInit {
     if (numero < 4) {
       numero = Number(txt?.textContent) + 1;
       this.precioTotalIngredientes += precio;
-      console.log(this.precioTotalIngredientes);
     }
     if (txt?.textContent != undefined) {
       txt.textContent = String(numero);

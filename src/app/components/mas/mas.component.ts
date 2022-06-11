@@ -21,8 +21,6 @@ export class MasComponent implements OnInit {
     this.c = localStorage.getItem('carrito');
     this.carrito.push(JSON.parse(this.c));
     this.carrito = this.carrito[0];
-
-    console.log(this.carrito);
   }
 
   public calcularTotal() {
