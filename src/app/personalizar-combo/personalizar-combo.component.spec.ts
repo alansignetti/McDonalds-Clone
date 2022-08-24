@@ -8,18 +8,13 @@ describe('PersonalizarComboComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PersonalizarComboComponent ]
-    })
-    .compileComponents();
+      declarations: [PersonalizarComboComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PersonalizarComboComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });

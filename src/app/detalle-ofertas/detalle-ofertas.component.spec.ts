@@ -8,18 +8,13 @@ describe('DetalleOfertasComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DetalleOfertasComponent ]
-    })
-    .compileComponents();
+      declarations: [DetalleOfertasComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DetalleOfertasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
   });
 });

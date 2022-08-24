@@ -5,17 +5,17 @@
 
   <div *ngIf="hamburguesa">
     <div ngClass="flex-detalle">
-      <h3>{{ hamburguesa?.nombre }}</h3>
+      <h3>{{ hamburguesa.nombre }}</h3>
       <p>
-        $ {{ hamburguesa?.precio }}
+        $ {{ hamburguesa.precio }}
         <img
           class="img-detalle"
-          src="assets/img/{{ hamburguesa?.imagen }}.png"
-          alt="{{ hamburguesa?.imagen }}"
+          src="assets/img/{{ hamburguesa.imagen }}.png"
+          alt="{{ hamburguesa.imagen }}"
         />
       </p>
 
-      <p>{{ hamburguesa?.descripcion }}</p>
+      <p>{{ hamburguesa.descripcion }}</p>
     </div>
   </div>
 
@@ -27,7 +27,7 @@
 
   <div class="personalizarHamburguesa" style="padding-top: 10%">
     <div>
-      <a [routerLink]="['/', 'personalizar-combo', hamburguesa?.id]">
+      <a [routerLink]="['/', 'personalizar-combo', hamburguesa.id]">
         <div class="boton-seccion">
           <img
             src="assets/img/icono-hamburguesa.png"
